@@ -1,0 +1,16 @@
+.productBrand {
+    color: whitesmoke; 
+};
+.imageNormal {
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+};
+.buyButtom {
+    background-color: greenyellow; 
+};
+.element--produto {
+    background: chartreuse;
+    height: 500px;  
+}

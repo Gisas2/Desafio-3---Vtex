@@ -1,0 +1,155 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [ "sticky-layout#desktop", "sticky-layout#footer"]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "search-bar",
+      "locale-switcher",
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "120"
+    }
+  },
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "logo",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": []
+  },
+  "sticky-layout#footer": {
+    "props": {
+      "blockClass": "sticky-footer",
+      "position": "bottom"
+    },
+    "children": ["flex-layout.row#footer-desktop"]
+  },
+  "flex-layout.row#footer-desktop": {
+    "children": [
+      "flex-layout.col#spacer",
+      "flex-layout.col#footerMenu",
+      "flex-layout.col#spacer"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.col#footerMenu": {
+    "children": ["vtex.menu@2.x:menu#footerMenu"],
+    "props": {
+      "width": "auto"
+    }
+  },
+  "vtex.menu@2.x:menu#footerMenu": {
+    "children": [
+      "login",
+      "menu-item#desafios",
+      "menu-item#loja",
+      "menu-item#suporte"
+    ]
+  },
+  "menu-item#desafios": {
+    "props": {
+      "id": "menu-item-sdesafios",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://gihupmedal--hiringcoders2021.myvtex.com/",
+        "noFollow": false,
+        "tagTitle": "Desafios",
+        "text": "DESAFIOS"
+      }
+    }
+  },
+  "menu-item#loja": {
+    "props": {
+      "id": "menu-item-loja",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://gihupmedal--hiringcoders2021.myvtex.com/",
+        "noFollow": false,
+        "tagTitle": "loja",
+        "text": "LOJA"
+      }
+    }
+  },
+  "menu-item#suporte": {
+    "props": {
+      "id": "menu-item-suporte",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://www.convertte.com.br/gerador-link-whatsapp/",
+        "noFollow": false,
+        "tagTitle": "Suporte",
+        "text": "SUPORTE"
+      }
+    }
+  }
+}
+
+
+  
+        
